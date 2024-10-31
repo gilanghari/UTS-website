@@ -1,0 +1,102 @@
+/* Styling dasar */
+body {
+    font-family: Arial, sans-serif;
+    background-color: #f8f9fa;
+}
+
+/* Navbar styling */
+.navbar {
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
+/* Sidebar styling */
+#sidebar {
+    height: 100vh;
+    position: fixed;
+    top: 0;
+    left: 0;
+    padding-top: 60px;
+    box-shadow: 2px 0 5px rgba(0, 0, 0, 0.1);
+    background-color: #343a40;
+}
+
+#sidebar .nav-link {
+    color: #fff;
+    padding: 15px;
+    font-size: 1rem;
+}
+
+#sidebar .nav-link:hover,
+#sidebar .nav-link.active {
+    background-color: #495057;
+    color: #fff;
+    border-radius: 0 10px 10px 0;
+}
+
+/* Main content styling */
+main {
+    margin-left: 250px; /* Sesuaikan dengan lebar sidebar */
+    padding: 20px;
+    transition: all 0.3s;
+}
+
+main h2 {
+    color: #343a40;
+    margin-top: 20px;
+}
+
+/* Table styling */
+.table-bordered {
+    border: 1px solid #dee2e6;
+    margin-top: 10px;
+}
+
+.table thead th {
+    background-color: #007bff;
+    color: #fff;
+}
+
+.table tbody tr:hover {
+    background-color: #f1f1f1;
+}
+
+/* Form styling */
+form label {
+    font-weight: 600;
+    color: #343a40;
+}
+
+form .form-control {
+    border: 1px solid #ced4da;
+    border-radius: 5px;
+}
+
+form button {
+    background-color: #007bff;
+    border: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+    color: #fff;
+    font-weight: 600;
+    cursor: pointer;
+    transition: background-color 0.3s;
+}
+
+form button:hover {
+    background-color: #0056b3;
+}
+
+/* Responsiveness */
+@media (max-width: 768px) {
+    #sidebar {
+        display: none;
+    }
+
+    main {
+        margin-left: 0;
+    }
+
+    .navbar {
+        text-align: center;
+    }
+}

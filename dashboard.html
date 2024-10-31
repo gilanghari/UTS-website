@@ -1,0 +1,109 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Employee Management Dashboard</title>
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background-color: #f4f4f9;
+            margin: 0;
+            padding: 0;
+        }
+        .sidebar {
+            width: 200px;
+            background-color: #2b68c5;
+            color: white;
+            position: fixed;
+            height: 100%;
+            padding-top: 20px;
+        }
+        .sidebar h2 {
+            text-align: center;
+        }
+        .sidebar ul {
+            list-style-type: none;
+            padding: 0;
+        }
+        .sidebar ul li {
+            padding: 15px;
+            text-align: center;
+            cursor: pointer;
+        }
+        .sidebar ul li:hover {
+            background-color: #1e50a2;
+        }
+        .content {
+            margin-left: 200px;
+            padding: 20px;
+        }
+        .dashboard-cards {
+            display: flex;
+            gap: 20px;
+        }
+        .card {
+            background: #fff;
+            padding: 20px;
+            border-radius: 5px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.1);
+            width: 200px;
+            text-align: center;
+        }
+        .card h3 {
+            font-size: 18px;
+            margin: 0;
+        }
+        .card p {
+            font-size: 24px;
+            font-weight: bold;
+            margin: 10px 0 0;
+        }
+        .header {
+            font-size: 24px;
+            color: #2b68c5;
+            margin-bottom: 20px;
+        }
+    </style>
+</head>
+<body>
+
+    <div class="sidebar">
+        <h2>Dashboard</h2>
+        <ul>
+            <li>Dashboard</li>
+            <li>Karyawan</li>
+            <li>Jabatan</li>
+            <li>Divisi</li>
+            <li>Absensi</li>
+            <li>Izin</li>
+            <li>Lembur</li>
+        </ul>
+    </div>
+
+    <div class="content">
+        <div class="header">Sistem Informasi Manajemen Karyawan</div>
+
+        <div class="dashboard-cards">
+            <div class="card">
+                <h3>Data Pegawai</h3>
+                <p>{{ data.employee_count }}</p>
+            </div>
+            <div class="card">
+                <h3>Absensi Hari Ini</h3>
+                <p>{{ data.today_absent }}</p>
+                <small>{{ data.date }}</small>
+            </div>
+            <div class="card">
+                <h3>Izin Menunggu Konfirmasi</h3>
+                <p>{{ data.pending_leave }}</p>
+            </div>
+            <div class="card">
+                <h3>Lembur Menunggu Konfirmasi</h3>
+                <p>{{ data.pending_overtime }}</p>
+            </div>
+        </div>
+    </div>
+
+</body>
+</html>
